@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sreeraj M.R Portfolio</title>
+<meta name="description" content="Sreeraj M.R, digital marketer in Kerala: social media marketing, SEO, Meta Ads lead generation, Google Ads, spec ads and websites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: soft charcoal editorial sheet. A 12-col grid at 1200px with hairline section rules, a mono label rail on the left and the content on the right. */
+:root {
+  /* Warm editorial neutrals with a restrained forest-green accent */
+  --bg: #F7F7F2;
+  --surface: #FFFFFF;
+  --surface-2: #EEF1EB;
+  --line: #DDE3DA;
+  --fg: #202923;
+  --muted: #68736B;
+  --accent: #315F50;
+  --accent-ink: #315F50;
+  --on-accent: #FFFFFF;
+  --display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --maxw: 1200px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { overflow-x: clip; }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 78% 8%, rgba(49,95,80,.065), transparent 34rem), var(--bg); color: var(--fg);
+  font: 400 16px/1.6 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--bg);
+}
+a { color: inherit; }
+::selection { background: var(--accent); color: var(--on-accent); }
+:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 3px; border-radius: 2px; }
+
+.wrap {
+  max-width: var(--maxw); margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 720px) {
+  .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); }
+}
+
+.label {
+  font: 500 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+h1, h2, h3 { font-weight: 400; margin: 0; text-wrap: balance; }
+h2 { font: 400 clamp(40px, 6vw, 72px)/1 var(--display); letter-spacing: -.01em; }
+h2 em, h1 em { font-style: italic; color: var(--accent-ink); }
+p { margin: 0; }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+}
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 76px; }
+.brand { font: 400 22px/1 var(--display); text-decoration: none; }
+.brand span { color: var(--accent-ink); }
+.nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.nav ul a { position: relative; display: inline-block; padding: 10px 0; font-size: 14px; color: var(--muted); text-decoration: none; transition: color .25s; }
+.nav ul a:hover, .nav ul a[aria-current="location"] { color: var(--fg); }
+.nav ul a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 3px; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.nav ul a:hover::after, .nav ul a[aria-current="location"]::after { transform: scaleX(1); }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
+  font: 500 14px/1 var(--body); text-decoration: none;
+  padding: 12px 18px; border-radius: 999px; border: 1px solid var(--line);
+  background: transparent; color: var(--fg); cursor: pointer; transition: background .2s, color .2s, border-color .2s;
+}
+.btn:hover { border-color: var(--fg); }
+.btn.solid { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.btn.solid:hover { filter: brightness(1.05); }
+@media (max-width: 820px) { .nav ul { display: none; } }
+
+/* ---------- Hero ---------- */
+.hero { padding-block: clamp(48px, 7vw, 96px) clamp(40px, 6vw, 72px); }
+.hero-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; margin-bottom: clamp(28px, 4vw, 48px); }
+.status { display: inline-flex; align-items: center; gap: 10px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 var(--accent); animation: pulse 2.4s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent); } 70% { box-shadow: 0 0 0 10px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+.hero h1 {
+  font: 400 clamp(72px, 15vw, 210px)/.86 var(--display); letter-spacing: -.035em;
+  margin-left: -.04em;
+}
+.hero-grid {
+  display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px;
+  margin-top: clamp(32px, 5vw, 64px); align-items: end;
+}
+.hero-copy { grid-column: 1 / span 6; min-width: 0; }
+.hero-lede { font-size: clamp(18px, 2vw, 22px); line-height: 1.45; max-width: 34ch; }
+.hero-lede strong { font-weight: 500; }
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+
+/* Campaign card in hero: real figures from the Google Ads account */
+.campaign {
+  grid-column: 8 / span 5; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 14px; padding: 20px;
+}
+.campaign-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; margin-bottom: 18px; }
+.campaign-head .label:last-child { white-space: nowrap; }
+.metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border-radius: 8px; overflow: hidden; }
+.metric { background: var(--surface); padding: 14px 14px 12px; }
+.metric b { display: block; font: 400 34px/1.05 var(--display); font-variant-numeric: tabular-nums; }
+.metric .label { font-size: 11px; }
+.funnel { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+.bar { display: grid; grid-template-columns: 92px 1fr 40px; align-items: center; gap: 10px; font: 12px/1 var(--mono); color: var(--muted); }
+.bar i { display: block; height: 6px; border-radius: 3px; background: var(--surface-2); position: relative; overflow: hidden; }
+.bar i::after { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--w); background: var(--accent); border-radius: 3px; animation: grow 1.4s cubic-bezier(.2,.7,.2,1) both .5s; }
+.bar span:last-child { text-align: right; color: var(--fg); font-variant-numeric: tabular-nums; }
+@keyframes grow { from { width: 0; } }
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-copy, .campaign { grid-column: 1 / -1; }
+}
+
+/* load sequence */
+.rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+.rise.d1 { animation-delay: .08s; } .rise.d2 { animation-delay: .18s; } .rise.d3 { animation-delay: .3s; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+
+/* ---------- Marquee ---------- */
+.marquee { border-block: 1px solid var(--line); overflow: hidden; padding-block: 18px; }
+.marquee-track { display: flex; gap: 48px; width: max-content; animation: slide 38s linear infinite; }
+.marquee-track span { font: 400 clamp(26px, 3.4vw, 40px)/1 var(--display); white-space: nowrap; display: inline-flex; align-items: center; gap: 48px; }
+.marquee-track span::after { content: "✳"; font-family: var(--body); font-size: .5em; color: var(--accent-ink); }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* ---------- Sections ---------- */
+section.block { padding-block: clamp(64px, 8vw, 104px); border-bottom: 1px solid var(--line); }
+.sec-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; }
+.sec-rail { grid-column: 1 / span 3; }
+.sec-main { grid-column: 4 / -1; min-width: 0; }
+@media (max-width: 900px) { .sec-rail, .sec-main { grid-column: 1 / -1; } }
+.sec-rail .label { position: sticky; top: 92px; display: block; }
+
+/* About */
+.about-lead { font: 400 clamp(28px, 3.6vw, 44px)/1.18 var(--display); letter-spacing: -.005em; max-width: 26ch; text-wrap: pretty; }
+.about-lead em { color: var(--accent-ink); }
+.about-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 40px; color: var(--muted); max-width: 62rem; }
+.about-cols p { max-width: 42ch; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 56px; border-top: 1px solid var(--line); }
+.stat { padding: 22px 20px 0 0; }
+.stat + .stat { border-left: 1px solid var(--line); padding-left: 20px; }
+.stat b { display: block; font: 400 clamp(44px, 6vw, 72px)/1 var(--display); font-variant-numeric: tabular-nums; }
+.stat b sup { font-size: .45em; color: var(--accent-ink); vertical-align: top; position: relative; top: .25em; }
+@media (max-width: 640px) { .about-cols { grid-template-columns: 1fr; } }
+
+/* Services */
+.services { list-style: none; margin: 40px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.services li {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px; align-items: start;
+  padding-block: 26px; border-bottom: 1px solid var(--line); transition: padding .3s;
+}
+.services h3 { font: 400 clamp(28px, 3.4vw, 42px)/1.05 var(--display); }
+.services p { color: var(--muted); max-width: 44ch; padding-top: 6px; }
+.services li:hover h3 { color: var(--accent-ink); }
+@media (max-width: 640px) { .services li { grid-template-columns: 1fr; gap: 8px; } }
+
+/* Work */
+.work-intro { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 32px; }
+.work-intro p { color: var(--muted); max-width: 40ch; }
+.project { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; padding-top: 48px; margin-top: 48px; border-top: 1px solid var(--line); }
+.project:first-of-type { border-top: 0; margin-top: 40px; padding-top: 0; }
+.project-copy { grid-column: 1 / span 5; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.project-media { grid-column: 6 / -1; min-width: 0; }
+.project.flip .project-copy { grid-column: 8 / -1; order: 2; }
+.project.flip .project-media { grid-column: 1 / span 7; order: 1; }
+.project h3 { font: 400 clamp(32px, 4vw, 52px)/1 var(--display); }
+.project ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; color: var(--muted); }
+.project li { padding-left: 22px; position: relative; max-width: 44ch; }
+.project li::before { content: ""; position: absolute; left: 0; top: .72em; width: 10px; height: 1px; background: var(--accent-ink); }
+.link-arrow { display: inline-flex; align-items: center; gap: 8px; font: 500 14px/1 var(--mono); color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 6px; align-self: flex-start; transition: border-color .2s, color .2s; }
+.link-arrow:hover { border-color: var(--accent-ink); color: var(--accent-ink); }
+.link-arrow svg { transition: transform .2s; }
+.link-arrow:hover svg { transform: translate(2px, -2px); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+
+/* Browser frame with long screenshot that scrolls on hover */
+.browser { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.browser-bar { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+.browser-bar .dots { display: flex; gap: 6px; }
+.browser-bar .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--line); }
+.browser-bar .url { flex: 1; min-width: 0; font: 12px/1 var(--mono); color: var(--muted); background: var(--bg); border-radius: 6px; padding: 7px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.screen { height: clamp(320px, 42vw, 480px); overflow: hidden; background: #fff; position: relative; }
+.screen img { display: block; width: 100%; height: auto; transform: translateY(0); transition: transform 7s cubic-bezier(.4,0,.2,1); }
+.browser:hover .screen img, .browser:focus-within .screen img { transform: translateY(calc(-100% + clamp(320px, 42vw, 480px))); }
+
+/* Spec ads: vertical reels */
+.reels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.reel { margin: 0; position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); aspect-ratio: 9 / 16; max-width: 100%; }
+.reel img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.reel:hover img { transform: scale(1.04); }
+.reel figcaption { position: absolute; left: 10px; bottom: 10px; font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: #f2f2ea; background: rgba(12,12,11,.62); padding: 7px 9px; border-radius: 999px; backdrop-filter: blur(6px); }
+.reel .play { position: absolute; top: 10px; right: 10px; width: 30px; height: 30px; border-radius: 50%; background: rgba(12,12,11,.62); display: grid; place-items: center; transition: opacity .2s; }
+.reel video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
+.reel[role="button"] { cursor: pointer; }
+.reel.playing .play { opacity: 0; }
+.project-media > .shot + .shot, .project-media > .kpis + .shot { margin-top: 16px; }
+.funnel-note { margin-top: 12px; font-size: 11px; }
+
+/* Ads screenshot */
+.shot { border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #fff; }
+.shot img { display: block; width: 100%; height: auto; }
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 16px; }
+.kpis div { padding: 14px 16px; border-left: 1px solid var(--line); }
+.kpis div:first-child { border-left: 0; }
+.kpis b { display: block; font: 400 30px/1.1 var(--display); font-variant-numeric: tabular-nums; }
+.kpis .label { font-size: 11px; }
+@media (max-width: 560px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .kpis div:nth-child(3) { border-left: 0; } .kpis div:nth-child(n+3) { border-top: 1px solid var(--line); } }
+
+/* Instagram */
+.insta { display: block; max-width: 420px; }
+.insta img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 12px; border: 1px solid var(--line); aspect-ratio: 4 / 5; max-width: 100%; }
+
+@media (max-width: 900px) {
+  .project-copy, .project-media, .project.flip .project-copy, .project.flip .project-media { grid-column: 1 / -1; order: 0; }
+}
+@media (max-width: 480px) { .reels { grid-template-columns: repeat(2, minmax(0, 1fr)); } .reels .reel:nth-child(3) { display: none; } }
+
+/* Skills & tools */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-top: 40px; }
+.skill { background: var(--bg); padding: 24px 22px 26px; display: flex; flex-direction: column; gap: 10px; transition: background .25s; }
+.skill:hover { background: var(--surface); }
+.skill h3 { font: 400 28px/1.05 var(--display); }
+.skill p { color: var(--muted); font-size: 14.5px; }
+@media (max-width: 820px) { .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .skills { grid-template-columns: 1fr; } }
+
+.toolbox { margin-top: 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 40px; }
+.toolgroup { display: flex; flex-direction: column; gap: 14px; padding-top: 16px; border-top: 1px solid var(--line); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font: 500 14px/1 var(--body); padding: 10px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); transition: border-color .2s, transform .2s; }
+.chip:hover { border-color: var(--accent-ink); transform: translateY(-1px); }
+@media (max-width: 640px) { .toolbox { grid-template-columns: 1fr; } }
+
+/* Quote */
+.quote-sec { padding-block: clamp(72px, 9vw, 120px); border-bottom: 1px solid var(--line); }
+blockquote { margin: 0; font: 400 clamp(32px, 4.8vw, 64px)/1.1 var(--display); letter-spacing: -.01em; max-width: 22ch; text-wrap: balance; }
+blockquote .mark { color: var(--accent-ink); font-style: italic; }
+.quote-foot { display: flex; align-items: center; gap: 14px; margin-top: 36px; }
+.quote-foot i { width: 40px; height: 1px; background: var(--accent-ink); display: block; }
+
+/* Contact */
+.contact { padding-block: clamp(80px, 11vw, 140px) 48px; }
+.contact h2 { font-size: clamp(56px, 11vw, 160px); line-height: .9; letter-spacing: -.03em; }
+.contact-row { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; margin-top: 56px; }
+.contact-intro { grid-column: 1 / span 5; color: var(--muted); max-width: 36ch; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+.contact-list { grid-column: 7 / -1; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); min-width: 0; }
+.contact-list li { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; gap: 16px; align-items: center; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.contact-list .val { font-size: clamp(16px, 1.8vw, 19px); overflow-wrap: anywhere; user-select: all; text-decoration: none; }
+a.val:hover { color: var(--accent-ink); }
+.copy { font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 8px 10px; cursor: pointer; min-width: 64px; }
+.copy:hover { color: var(--fg); border-color: var(--fg); }
+.copy.done { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
+@media (max-width: 900px) { .contact-intro, .contact-list { grid-column: 1 / -1; } }
+@media (max-width: 480px) { .contact-list li { grid-template-columns: 1fr auto; } .contact-list li .label { grid-column: 1 / -1; } }
+
+footer { border-top: 1px solid var(--line); padding-block: 24px; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Subtle interaction and scroll motion */
+.btn, .campaign, .services li, .project-media img, .reel, .skill, .tag {
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background-color .28s ease, color .28s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(32,41,35,.09); }
+.campaign:hover { transform: translateY(-4px); box-shadow: 0 18px 38px rgba(32,41,35,.10); }
+.services li:hover { padding-left: 8px; }
+.project-media img:hover, .reel:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(32,41,35,.12); }
+.skill:hover, .tag:hover { transform: translateY(-2px); border-color: var(--accent); }
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Sreeraj<span>.</span></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn solid" href="#contact">Let’s talk</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top rise">
+      <span class="label status"><span class="dot" aria-hidden="true"></span>Available for freelance · 2026</span>
+      <span class="label">Digital marketer · Palakkad, Kerala</span>
+    </div>
+    <h1 class="rise d1">Sreeraj <em>M.R</em></h1>
+    <div class="hero-grid">
+      <div class="hero-copy rise d2">
+        <p class="hero-lede">I help businesses get seen online and turn that attention into leads, through <strong>social media marketing</strong>, SEO, Google Ads and content that people want to watch.</p>
+        <div class="hero-cta">
+          <a class="btn solid" href="#work">See my work
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v12M1 7l6 6 6-6" stroke="currentColor" stroke-width="1.6"/></svg>
+          </a>
+          <a class="btn" href="https://instagram.com/growf_inity" target="_blank" rel="noopener">@growf_inity</a>
+        </div>
+      </div>
+      <aside class="campaign rise d3" aria-label="Meta Ads campaign snapshot">
+        <div class="campaign-head">
+          <span class="label">Meta Ads · Lead campaigns</span>
+          <span class="label">21 Oct – 19 Nov 2026</span>
+        </div>
+        <div class="metrics">
+          <div class="metric"><b>125</b><span class="label">Form leads</span></div>
+          <div class="metric"><b>₹2,678</b><span class="label">Total spend</span></div>
+          <div class="metric"><b>₹11.37</b><span class="label">Best cost / lead</span></div>
+          <div class="metric"><b>8,394</b><span class="label">Impressions</span></div>
+        </div>
+        <div class="funnel" aria-hidden="true">
+          <div class="bar"><span>Impressions</span><i style="--w:100%"></i><span>8,394</span></div>
+          <div class="bar"><span>Reach</span><i style="--w:66%"></i><span>5,534</span></div>
+          <div class="bar"><span>Leads</span><i style="--w:2%"></i><span>79</span></div>
+        </div>
+        <p class="label funnel-note">Funnel: wisemove hiring ad</p>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Social Media Marketing</span><span>Spec Ad Production</span><span>Search Engine Optimization</span><span>Google Ads</span><span>Meta Ads</span><span>Website Development</span>
+    <span>Social Media Marketing</span><span>Spec Ad Production</span><span>Search Engine Optimization</span><span>Google Ads</span><span>Meta Ads</span><span>Website Development</span>
+  </div>
+</div>
+
+<main>
+  <section class="block" id="about">
+    <div class="wrap sec-grid">
+      <div class="sec-rail"><span class="label">About</span></div>
+      <div class="sec-main">
+        <p class="about-lead">Hi, I’m Sreeraj. I build <em>simple, effective</em> marketing strategies that help brands grow online and reach the right audience.</p>
+        <div class="about-cols">
+          <p>My main focus is Social Media Marketing. I help businesses grow their online presence, reach more people and build better engagement through social media strategies that fit the brand.</p>
+          <p>I also work across SEO, Google Ads and content marketing. I’ve worked with startups and local businesses to improve brand visibility, increase website traffic and generate quality leads.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>15<sup>+</sup></b><span class="label">Clients</span></div>
+          <div class="stat"><b>30<sup>+</sup></b><span class="label">Projects completed</span></div>
+          <div class="stat"><b>90<sup>+</sup></b><span class="label">Positive reviews</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="services">
+    <div class="wrap sec-grid">
+      <div class="sec-rail"><span class="label">Services</span></div>
+      <div class="sec-main">
+        <h2>The work <em>I do</em></h2>
+        <ul class="services">
+          <li><h3>Social Media Marketing</h3><p>Content plans, trend-led posts and community building that grow reach and engagement on Instagram and Facebook.</p></li>
+          <li><h3>Spec Ad Production</h3><p>Short-form video ads, from concept and script to shoot and edit, made for Reels and Shorts.</p></li>
+          <li><h3>SEO for Websites &amp; YouTube</h3><p>Keyword research, on-page fixes and video optimization so people find you when they search.</p></li>
+          <li><h3>Meta Ads</h3><p>Instagram and Facebook lead campaigns with instant forms, tested creatives and tracked cost per lead.</p></li>
+          <li><h3>Google Ads</h3><p>Search campaigns with tracked conversions, tight budgets and regular optimization of cost per click.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="work-intro">
+        <div>
+          <span class="label">Selected work</span>
+          <h2 style="margin-top:16px">Websites, ads <em>&amp;</em> campaigns</h2>
+        </div>
+        <p>A mix of build work and marketing work. Hover over a site preview to scroll through the page.</p>
+      </div>
+
+      <article class="project">
+        <div class="project-copy">
+          <div class="tags"><span class="tag">WordPress</span><span class="tag">E-commerce</span><span class="tag">Conversion</span></div>
+          <h3>E-commerce store</h3>
+          <ul>
+            <li>Built a WooCommerce store for clothing and plants as a hands-on project to learn how online stores sell.</li>
+            <li>Set up product categories, a flash-sale banner and a simple checkout flow to understand how shoppers go from browsing to buying.</li>
+            <li>Gives me a working store to practise SEO, ad landing pages and tracking on.</li>
+          </ul>
+          <a class="link-arrow" href="https://style.mrsreeraj.com/" target="_blank" rel="noopener">style.mrsreeraj.com
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+        <div class="project-media">
+          <div class="browser" tabindex="0" aria-label="Screenshot of style.mrsreeraj.com">
+            <div class="browser-bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">style.mrsreeraj.com</span></div>
+            <div class="screen"><img src="assets/site-ecommerce.jpg" alt="Screenshot of the e-commerce store with a flash sale banner, plant categories and popular products" loading="lazy"></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project flip">
+        <div class="project-copy">
+          <div class="tags"><span class="tag">Meta Ads</span><span class="tag">Lead forms</span><span class="tag">Recruitment</span></div>
+          <h3>Meta Ads lead generation</h3>
+          <ul>
+            <li>Ran Instagram and Facebook lead-form campaigns for wisemove and VASHQ.</li>
+            <li>Brought in 125 form leads in 30 days on a total spend of ₹2,678.</li>
+            <li>The wisemove hiring ad reached 5,534 people and got leads at ₹11.37 each.</li>
+          </ul>
+        </div>
+        <div class="project-media">
+          <div class="shot"><img src="assets/meta-wisemove.jpg" alt="Meta Ads Manager: wisemove hiring ad with 79 form leads at ₹11.37 per lead, ₹898.20 spent, 8,394 impressions and 5,534 reach" loading="lazy"></div>
+          <div class="shot"><img src="assets/meta-vashq.jpg" alt="Meta Ads Manager: Leads ad VASHQ ad set with 46 form leads at ₹38.69 per lead and ₹1,779.79 spent" loading="lazy"></div>
+          <div class="kpis">
+            <div><b>125</b><span class="label">Form leads</span></div>
+            <div><b>₹11.37</b><span class="label">Best cost / lead</span></div>
+            <div><b>₹2,678</b><span class="label">Total spend</span></div>
+            <div><b>5,534</b><span class="label">Reach</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-copy">
+          <div class="tags"><span class="tag">SEO</span><span class="tag">Search Console</span></div>
+          <h3>SEO results</h3>
+          <ul>
+            <li>vashq.com ranks at an average position of 2.8 on Google, with a 42% click-through rate.</li>
+            <li>352 clicks from 838 search impressions in three months.</li>
+            <li>getvia.in earned 99 clicks from 738 impressions over the same period.</li>
+          </ul>
+          <a class="link-arrow" href="https://home.vashq.com" target="_blank" rel="noopener">vashq.com
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <a class="link-arrow" href="https://home.getvia.in" target="_blank" rel="noopener">getvia.in
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+        <div class="project-media">
+          <div class="shot"><img src="assets/seo-vashq.jpg" alt="Google Search Console for vashq.com over 3 months: 352 clicks, 838 impressions, 42% average CTR, average position 2.8" loading="lazy"></div>
+          <div class="kpis">
+            <div><b>352</b><span class="label">Clicks</span></div>
+            <div><b>838</b><span class="label">Impressions</span></div>
+            <div><b>42%</b><span class="label">CTR</span></div>
+            <div><b>2.8</b><span class="label">Avg. position</span></div>
+          </div>
+          <div class="shot"><img src="assets/seo-getvia.jpg" alt="Google Search Console for getvia.in over 3 months: 99 clicks, 738 impressions, 13.4% average CTR, average position 8.6" loading="lazy"></div>
+        </div>
+      </article>
+
+      <article class="project flip">
+        <div class="project-copy">
+          <div class="tags"><span class="tag">Concept</span><span class="tag">Shoot</span><span class="tag">Edit</span></div>
+          <h3>Spec ads &amp; reels</h3>
+          <ul>
+            <li>Short-form ads for Instagram Reels, made with a small creative team. I worked across concept, shoot and edit.</li>
+            <li>Malayalam-language storytelling built around relatable everyday moments.</li>
+            <li>Edited in CapCut and VN, with AI voice and visuals where they help.</li>
+          </ul>
+        </div>
+        <div class="project-media reels">
+          <figure class="reel" tabindex="0" role="button" aria-label="Play spec ad: Bear teddy"><video src="assets/reel-teddy.mp4" poster="assets/reel-teddy.jpg" muted playsinline loop preload="metadata"></video><span class="play" aria-hidden="true"><svg width="10" height="12" viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z" fill="#f2f2ea"/></svg></span><figcaption>Spec ad · team</figcaption></figure>
+          <figure class="reel" tabindex="0" role="button" aria-label="Play spec ad: Zero Budget, High ROI"><video src="assets/reel-football.mp4" poster="assets/reel-football.jpg" muted playsinline loop preload="metadata"></video><span class="play" aria-hidden="true"><svg width="10" height="12" viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z" fill="#f2f2ea"/></svg></span><figcaption>Spec ad · team</figcaption></figure>
+          <figure class="reel" tabindex="0" role="button" aria-label="Play reel: Starting small, dreaming big"><video src="assets/reel-starting-small.mp4" poster="assets/reel-starting-small.jpg" muted playsinline loop preload="metadata"></video><span class="play" aria-hidden="true"><svg width="10" height="12" viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z" fill="#f2f2ea"/></svg></span><figcaption>Reel</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-copy">
+          <div class="tags"><span class="tag">Google Ads</span><span class="tag">Search</span></div>
+          <h3>Google Ads campaign</h3>
+          <ul>
+            <li>Set up and ran a search campaign from December 2025 to March 2026.</li>
+            <li>Kept spend low at ₹439 while testing keywords and ad copy.</li>
+            <li>Reached a 16.3% click-through rate at ₹25.85 per click.</li>
+          </ul>
+        </div>
+        <div class="project-media">
+          <div class="shot"><img src="assets/ads-dashboard.jpg" alt="Google Ads overview dashboard showing 17 clicks, 104 impressions, ₹25.85 average CPC and ₹439 cost" loading="lazy"></div>
+          <div class="kpis">
+            <div><b>104</b><span class="label">Impressions</span></div>
+            <div><b>17</b><span class="label">Clicks</span></div>
+            <div><b>₹25.85</b><span class="label">Avg. CPC</span></div>
+            <div><b>₹439</b><span class="label">Total spend</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project flip">
+        <div class="project-copy">
+          <div class="tags"><span class="tag">Instagram</span><span class="tag">Content</span><span class="tag">Branding</span></div>
+          <h3>Digital presence</h3>
+          <ul>
+            <li>My Instagram page shows my digital marketing work: spec ads, creative campaigns and content ideas based on current trends.</li>
+            <li>I use it to share what I learn about branding, audience engagement, visual storytelling and content creation.</li>
+          </ul>
+          <a class="link-arrow" href="https://instagram.com/growf_inity" target="_blank" rel="noopener">instagram.com/growf_inity
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+        <div class="project-media insta">
+          <img src="assets/insta-post.jpg" alt="Instagram post: Digital Marketing, strategies for online business growth" loading="lazy">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap sec-grid">
+      <div class="sec-rail"><span class="label">Skills &amp; tools</span></div>
+      <div class="sec-main">
+        <h2>What I bring <em>to a brand</em></h2>
+        <div class="skills">
+          <div class="skill"><span class="label">Search</span><h3>Search Engine Optimization</h3><p>On-page SEO, keyword research and Search Console tracking.</p></div>
+          <div class="skill"><span class="label">Paid</span><h3>Google Ads</h3><p>Search campaigns, bidding and conversion tracking.</p></div>
+          <div class="skill"><span class="label">Paid social</span><h3>Meta Ads</h3><p>Instagram and Facebook campaigns aimed at the right audience.</p></div>
+          <div class="skill"><span class="label">Build</span><h3>Website Development</h3><p>Fast, clean WordPress sites and online stores.</p></div>
+          <div class="skill"><span class="label">Plan</span><h3>Content Strategy</h3><p>Content pillars, calendars and formats that fit the brand.</p></div>
+          <div class="skill"><span class="label">Measure</span><h3>Google Analytics</h3><p>Traffic, events and reports that show what is working.</p></div>
+        </div>
+
+        <div class="toolbox">
+          <div class="toolgroup"><span class="label">Analytics &amp; ads</span>
+            <div class="chips"><span class="chip">Google Analytics</span><span class="chip">Tag Manager</span><span class="chip">Search Console</span><span class="chip">Google Ads</span><span class="chip">Meta</span></div>
+          </div>
+          <div class="toolgroup"><span class="label">AI &amp; content</span>
+            <div class="chips"><span class="chip">ElevenLabs</span><span class="chip">Ideogram</span><span class="chip">Gemini</span><span class="chip">Notion</span></div>
+          </div>
+          <div class="toolgroup"><span class="label">Video &amp; design</span>
+            <div class="chips"><span class="chip">CapCut</span><span class="chip">VN</span><span class="chip">InShot</span><span class="chip">Picsart</span><span class="chip">Spotify</span></div>
+          </div>
+          <div class="toolgroup"><span class="label">Web</span>
+            <div class="chips"><span class="chip">WordPress</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-sec" aria-labelledby="why">
+    <div class="wrap sec-grid">
+      <div class="sec-rail"><span class="label" id="why">Why hire me</span></div>
+      <div class="sec-main">
+        <blockquote><span class="mark">“</span>I stay updated with industry trends, adapt quickly to new tools and platform changes, and use data to get <span class="mark">better marketing results.</span><span class="mark">”</span></blockquote>
+        <div class="quote-foot"><i aria-hidden="true"></i><span class="label">Sreeraj M.R · Always learning, always improving</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <span class="label">Contact</span>
+      <h2 style="margin-top:20px">Let’s grow<br><em>your brand.</em></h2>
+      <div class="contact-row">
+        <div class="contact-intro">
+          <p>Need more reach, more traffic or more leads? Send me a message and tell me about your business. I usually reply within a day.</p>
+          <a class="btn solid" href="mailto:sreerajmr22056@gmail.com">Email me
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+        <ul class="contact-list">
+          <li><span class="label">Email</span><a class="val" href="mailto:sreerajmr22056@gmail.com">sreerajmr22056@gmail.com</a><button class="copy" type="button" id="copy-email" data-copy="sreerajmr22056@gmail.com">Copy</button></li>
+          <li><span class="label">Phone</span><a class="val" href="tel:+918921056284">+91 89210 56284</a><button class="copy" type="button" id="copy-phone" data-copy="+918921056284">Copy</button></li>
+          <li><span class="label">Instagram</span><a class="val" href="https://instagram.com/growf_inity" target="_blank" rel="noopener">@growf_inity</a><span></span></li>
+          <li><span class="label">LinkedIn</span><a class="val" href="https://www.linkedin.com/search/results/people/?keywords=Sreeraj%20Mr" target="_blank" rel="noopener">Sreeraj Mr</a><span></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="label">© 2026 Sreeraj M.R</span>
+    <span class="label">Digital marketing · Kerala, India</span>
+  </div>
+</footer>
+
+<script>
+
+// Highlight the navigation link for the section currently in view.
+(function () {
+  var links = Array.from(document.querySelectorAll('.nav ul a[href^="#"]'));
+  var sections = links.map(function (link) { return document.querySelector(link.getAttribute('href')); }).filter(Boolean);
+  if (!('IntersectionObserver' in window)) return;
+  var navObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      links.forEach(function (link) {
+        if (link.getAttribute('href') === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    });
+  }, { rootMargin: '-25% 0px -60% 0px', threshold: 0 });
+  sections.forEach(function (section) { navObserver.observe(section); });
+})();
+
+// Reveal page sections and key content as they enter the viewport.
+(function () {
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = document.querySelectorAll('.hero, .block, .quote-sec, .contact, .campaign, .services li, .project, .skill');
+  if (reduceMotion || !('IntersectionObserver' in window)) return;
+  targets.forEach(function (el) { el.classList.add('reveal'); });
+  var revealObserver = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -35px 0px' });
+  targets.forEach(function (el) { revealObserver.observe(el); });
+})();
+
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = btn.getAttribute('data-copy');
+    var done = function () {
+      btn.textContent = 'Copied'; btn.classList.add('done');
+      setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1600);
+    };
+    var fallback = function () {
+      var el = btn.previousElementSibling;
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+    };
+    try {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+
+// Reels: muted preview on hover, click / Enter to play with sound.
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+  var reels = document.querySelectorAll('.reel[role="button"]');
+  function stopOthers(keep) {
+    reels.forEach(function (r) {
+      if (r !== keep) { var v = r.querySelector('video'); v.pause(); v.muted = true; r.classList.remove('playing'); }
+    });
+  }
+  reels.forEach(function (fig) {
+    var v = fig.querySelector('video');
+    // If the browser blocks playback with sound, retry muted; if that fails too, show native controls.
+    var play = function () {
+      fig.classList.add('playing');
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {
+        if (!v.muted) {
+          v.muted = true;
+          v.play().catch(function () { fig.classList.remove('playing'); v.controls = true; });
+        } else { fig.classList.remove('playing'); v.controls = true; }
+      });
+    };
+    v.addEventListener('error', function () { fig.classList.remove('playing'); v.controls = true; });
+    v.addEventListener('pause', function () { fig.classList.remove('playing'); });
+    v.addEventListener('playing', function () { fig.classList.add('playing'); });
+    var pause = function () { v.pause(); fig.classList.remove('playing'); };
+    if (canHover && !reduce) {
+      fig.addEventListener('mouseenter', function () { if (v.paused) { v.muted = true; play(); } });
+      fig.addEventListener('mouseleave', function () { if (v.muted) pause(); });
+    }
+    var toggle = function (e) {
+      if (v.controls && e && e.target === v) return; // native controls handle their own clicks
+      if (!v.paused && !v.muted) { pause(); v.muted = true; return; }
+      stopOthers(fig);
+      v.muted = false;
+      play();
+    };
+    fig.addEventListener('click', toggle);
+    fig.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
